@@ -7,12 +7,11 @@
 	"postCreateCommand": "ops -plugin https://gitub.com/mastrogpt/olaris-ai",
 	"customizations": {
 		"vscode": {
-		  "extensions": [
-			"nuvolaris.nuvolaris-vscode-extension",
-			"ms-python.python",
-			"pamaron.pytest-runner"
-		  ]
+			"extensions": [
+				"nuvolaris.nuvolaris-vscode-extension",
+				"ms-python.python",
+				"pamaron.pytest-runner"
+			]
 		}
-	  }
-	
+	}
 }
