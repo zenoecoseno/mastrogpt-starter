@@ -1,0 +1,11 @@
+services:
+    app:
+        image: "ghcr.io/devcontainers/templates/miniconda:2.0.2"
+        volumes:
+            - .:./workspace
+        depends_on:
+            - redis
+    redis:
+        image: redis:latest
+        ports:
+            - "6379:6379"
