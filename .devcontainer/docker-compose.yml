@@ -1,6 +1,6 @@
 services:
     app:
-        image: "ghcr.io/devcontainers/templates/miniconda:2.0.2"
+        build: Dockerfile
         volumes:
             - .:./workspace
         depends_on:
@@ -8,4 +8,5 @@ services:
     redis:
         image: redis:latest
         ports:
-            - "6379:6379"
+            - "6379:6379"    
+ 

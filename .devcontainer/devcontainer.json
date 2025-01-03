@@ -1,22 +1,18 @@
 {
-    "name": "MastroGPT Devcontainer",
-    "dockerComposeFile": [ "docker-compose.yml" ],
-    "features": {
-     "ghcr.io/devcontainers/features/node:1": {
-        "version": "22"
-     }
-    },
-    "customizations": {
-      "vscode": {
-        "extensions": [
-            "nuvolaris.nuvolaris-vscode-extension",
-            "ms-python.python",
-            "pamaron.pytest-runner"        
-          ]
-      }
-    },
-    "workspaceFolder": "/workspace",
-    "mounts": [],
-    "postCreateCommand": "curl -sL bit.ly/get-ops | bash ; ln -sf $HOME/.local/bin/ops $HOME/.local/bin/nuv",
-    "remoteUser": "vscode"
-  }
+	"name": "MastroGPT Course",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"remoteUser": "node",
+	"postCreateCommand": "ops -plugin https://gitub.com/mastrogpt/olaris-ai",
+	"customizations": {
+		"vscode": {
+		  "extensions": [
+			"nuvolaris.nuvolaris-vscode-extension",
+			"ms-python.python",
+			"pamaron.pytest-runner"
+		  ]
+		}
+	  }
+	
+}
