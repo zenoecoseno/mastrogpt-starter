@@ -1,5 +1,5 @@
 FROM node:22
-
+ARG OPS_VERSION=v0.1.0-2501041342.dev
 # Install basic development tools
 RUN \
      apt update && \
@@ -14,10 +14,7 @@ RUN \
 # install ops and plugins
 USER node
 RUN \
-    LATEST=https://api.github.com/repos/apache/openserverless-cli/releases/latest ;\
-    VERSION=$(curl -s  "$LATEST" | jq -r '.name | .[1:]') ;\
-    echo downloading ops $VERSION ;\
-    curl -sL https://bit.ly/get-ops | VERSION=$VERSION bash
+    curl -sL https://bit.ly/get-ops | VERSION=${OPS_VERSION} bash
 ENV PATH="/home/node/.local/bin:${PATH}"
 RUN \
     ops -update
