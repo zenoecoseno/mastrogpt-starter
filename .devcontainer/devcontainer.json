@@ -1,8 +1,8 @@
 {
 	"name": "MastroGPT Course",
-	"image":  "sciabarracom/mastrogpt-starter:2501040800",
+	"image":  "sciabarracom/mastrogpt-starter:2501052000",
 	"remoteUser": "node",
-	"postCreateCommand": "ops -plugin https://gitub.com/mastrogpt/olaris-ai ; ops ai",
+	"postCreateCommand": "ops -plugin https://gitub.com/mastrogpt/olaris-ai ; ops ai lessons",
 	"customizations": {
 		"vscode": {
 			"extensions": [
