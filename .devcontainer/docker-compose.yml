@@ -1,6 +1,6 @@
 services:
     app:
-        build: Dockerfile
+        image: sciabarracom/mastrogpt-starter:2501041930
         volumes:
             - .:./workspace
         depends_on:

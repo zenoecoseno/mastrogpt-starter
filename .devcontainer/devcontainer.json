@@ -1,10 +1,8 @@
 {
 	"name": "MastroGPT Course",
-	"build": {
-		"dockerfile": "Dockerfile"
-	},
+	"image":  "sciabarracom/mastrogpt-starter:2501041945",
 	"remoteUser": "node",
-	"postCreateCommand": "ops -plugin https://gitub.com/mastrogpt/olaris-ai",
+	"postCreateCommand": "ops -plugin https://gitub.com/mastrogpt/olaris-ai ; ops ai",
 	"customizations": {
 		"vscode": {
 			"extensions": [
