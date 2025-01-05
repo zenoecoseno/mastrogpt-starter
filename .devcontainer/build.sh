@@ -14,9 +14,3 @@ docker buildx build --no-cache \
   -t $DH_IMAGE:$TAG . --push
 
 
-GH_IMAGE=ghcr.io/mastrogpt/mastrogpt-starter
-GH_TOKEN=${GITHUB_TOKEN:?please set GITHUB_TOKEN in .env}
-docker pull $DH_IMAGE:$TAG
-docker tag $DH_IMAGE:$TAG $GH_IMAGE:$TAG
-docker push $GH_IMAGE:$TAG
-
