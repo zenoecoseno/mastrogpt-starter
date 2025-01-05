@@ -6,7 +6,7 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"nuvolaris.nuvolaris-vscode-extension",
+				"pgant.antonio-ops-vscode-extension",
 				"ms-python.python",
 				"pamaron.pytest-runner"
 			]
