@@ -14,7 +14,10 @@ RUN \
 # install ops and plugins
 USER node
 RUN \
-    curl -sL bit.ly/get-ops-latest | bash
+    LATEST=https://api.github.com/repos/apache/openserverless-cli/releases/latest ;\
+    VERSION=$(curl -s  "$LATEST" | jq -r '.name | .[1:]') ;\
+    echo downloading ops $VERSION ;\
+    curl -sL https://bit.ly/get-ops | VERSION=$VERSION bash
 ENV PATH="/home/node/.local/bin:${PATH}"
 RUN \
     ops -update
