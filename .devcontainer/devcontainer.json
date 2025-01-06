@@ -10,7 +10,7 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"pgant.antonio-ops-vscode-extension",
+				"pgant.antonio-ops-vscode-extension@1.0.7",
 				"ms-python.python",
 				"pamaron.pytest-runner"
 			]
