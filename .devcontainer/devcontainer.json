@@ -1,8 +1,12 @@
 {
+	//"image":  "sciabarracom/mastrogpt-starter:2501052000",
+	"dockerComposeFile": ["docker-compose.yml"],
+	"service": "app",
+	//"workspaceFolder": "/workspace",
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 	"name": "MastroGPT Course",
-	"image":  "sciabarracom/mastrogpt-starter:2501052000",
 	"remoteUser": "node",
-	"postCreateCommand": "ops -plugin https://gitub.com/mastrogpt/olaris-ai ; ops ai lessons",
+	//"postCreateCommand": "ops -plugin https://gitub.com/mastrogpt/olaris-ai ; ops ai lesson",
 	"customizations": {
 		"vscode": {
 			"extensions": [
