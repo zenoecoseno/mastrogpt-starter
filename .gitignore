@@ -1,1 +1,6 @@
 .env
+!tests/.env
+!packages/.env
+__pycache__/
+node_modules/
+*.zip
