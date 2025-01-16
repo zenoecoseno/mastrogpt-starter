@@ -11,7 +11,7 @@
 				"pgant.antonio-ops-vscode-extension@1.0.7",
 				"ms-python.python",
 				"pamaron.pytest-runner",
-				""marp-team.marp-vscode"
+				"marp-team.marp-vscode"
 			]
 		}
 	}
