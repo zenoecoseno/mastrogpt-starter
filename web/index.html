@@ -1,1 +1,37 @@
-MastroGPT
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinocchio - Nuvolaris</title>
+    <style>
+        iframe {
+            position: absolute;
+            inset: 0;
+            border: none;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
+    <script>
+        window.onload = () => {
+            const iframe = document.querySelector('iframe');
+            setTimeout(() => {
+                const msg = {
+                    type: 'metadata',
+                    data: { namespace: 'testuser' }
+                };
+                iframe.contentWindow.postMessage(msg, 'https://pinocchio3.mistergpt.app');
+            }, 500);
+        };
+    </script>
+
+</head>
+
+<body>
+    <iframe src="https://pinocchio3.mistergpt.app"></iframe>
+</body>
+
+</html>
