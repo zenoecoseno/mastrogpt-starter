@@ -10,7 +10,7 @@ services:
         - minio
         - milvus
     redis:
-        image: redis:latest
+        image: docker.io/valkey/valkey:7
         ports:
           - "6379:6379"    
     etcd:
