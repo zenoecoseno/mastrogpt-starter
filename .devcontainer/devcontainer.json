@@ -1,5 +1,5 @@
 {
-	"name": "MastroGPT Course",
+	"name": "MastroGPT",
 	"dockerComposeFile": ["docker-compose.yml"],
 	"service": "app",
 	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",

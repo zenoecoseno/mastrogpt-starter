@@ -18,13 +18,16 @@
     <script>
         window.onload = () => {
             const iframe = document.querySelector('iframe');
-            setTimeout(() => {
+            fetch('/api/my/mastrogpt/index')
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
                 const msg = {
                     type: 'metadata',
-                    data: { namespace: 'testuser' }
+                    data: { namespace: data.username }
                 };
-                iframe.contentWindow.postMessage(msg, 'https://pinocchio3.mistergpt.app');
-            }, 500);
+                iframe.contentWindow.postMessage(msg, 'https://pinocchio3.mistergpt.app')
+            });
         };
     </script>
 
