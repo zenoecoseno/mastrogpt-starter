@@ -1,7 +1,11 @@
-import sys 
-sys.path.append("packages/mastrogpt/demo")
-import demo
+import sys
+sys.path.append("packages/mastrogpt/hello")
+import hello
 
-def test_demo():
-    res = demo.demo({})
-    assert res["output"] == "demo"
+def test_hello():
+    res = hello.hello({})
+    assert res["output"] == "Hello, world"
+    args = { "input": "Test"}
+    res = hello.hello(args)
+    assert res["output"] == "Hello, Test"
+    
