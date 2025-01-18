@@ -12,7 +12,8 @@
 				"ms-python.python",
 				"ms-vscode.test-adapter-converter",
 				"pamaron.pytest-runner",
-				"marp-team.marp-vscode"
+				"marp-team.marp-vscode",
+				"george-alisson.html-preview-vscode"
 			]
 		}
 	}
