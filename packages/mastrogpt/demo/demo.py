@@ -76,4 +76,4 @@ def sum_to(n):
     if code: res['code'] = code
     if html: res['html'] = html
 
-    return { "body": res }
+    return res
