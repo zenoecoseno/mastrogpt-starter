@@ -10,7 +10,7 @@ from pathlib import Path
 
 def main(args):
     
-    username = args.get("username")
+    username = args.get("user")
     password = args.get("password")
     username_check = args.get("MASTROGPT_USERNAME")
     password_check= args.get("MASTROGPT_PASSWORD")
