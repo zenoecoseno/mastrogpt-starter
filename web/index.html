@@ -16,26 +16,25 @@
     </style>
 
     <script>
-        window.onload = () => {
-            const iframe = document.querySelector('iframe');
+        window.addEventListener('load', () => {
+            const target = document.getElementById("target")
             fetch('/api/my/mastrogpt/index')
-            .then(response => response.json())
-            .then(data => {
-                console.log(data);
-                const msg = {
-                    type: 'metadata',
-                    data: { namespace: data.username }
-                };
-                let target = document.getElementById("target").src
-                iframe.contentWindow.postMessage(msg, target)
-            });
-        };
+                .then(response => response.json())
+                .then(data => {
+                    //console.log(data);
+                    const msg = {
+                        type: 'metadata',
+                        data: { namespace: data.username }
+                    };
+                    target.contentWindow.postMessage(msg, target.src)
+                });
+        });
     </script>
 
 </head>
 
 <body>
-    <iframe id="target" src="https://pinocchio3.openserverless.dev"></iframe>
+    <iframe id="target" src="https://pinocchio.openserverless.dev"></iframe>
 </body>
 
 </html>
