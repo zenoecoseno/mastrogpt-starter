@@ -26,7 +26,8 @@
                     type: 'metadata',
                     data: { namespace: data.username }
                 };
-                iframe.contentWindow.postMessage(msg, 'https://pinocchio3.mistergpt.app')
+                let target = document.getElementById("target").src
+                iframe.contentWindow.postMessage(msg, target)
             });
         };
     </script>
@@ -34,7 +35,7 @@
 </head>
 
 <body>
-    <iframe src="https://pinocchio3.mistergpt.app"></iframe>
+    <iframe id="target" src="https://pinocchio3.openserverless.dev"></iframe>
 </body>
 
 </html>
