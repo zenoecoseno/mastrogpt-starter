@@ -1,6 +1,6 @@
 services:
     app:
-      image: sciabarracom/mastrogpt-starter:2501052000
+      image: sciabarracom/mastrogpt-starter:2501191200
       volumes:
         - ../..:/workspaces:cached
       command: sleep inf
