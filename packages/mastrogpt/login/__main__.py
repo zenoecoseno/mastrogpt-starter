@@ -1,6 +1,7 @@
-# --kind python:default
-#--docker docker.io/apache/openserverless-runtime-python:v3.12-2501172243
+#--kind python:default
 #--web true
+#--param REDIS_URL $REDIS_URL
+#--param REDIS_PREFIX $REDIS_PREFIX
 #--param S3_SECRET_KEY $S3_SECRET_KEY
 #--annotation provide-api-key true
 import login
