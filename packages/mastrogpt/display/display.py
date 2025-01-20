@@ -21,7 +21,7 @@ def board(args):
     return out
     
 def display(args):
-    out = ""
+    out = "No content specified."
 
     if "html" in args:
         out = render("html.html", args)
@@ -41,6 +41,9 @@ def display(args):
     code = 200 if out != "" else 204
     return {
         "body": out,
-        "statusCode": code
+        "statusCode": code,
+        "headers": {
+            "Content-Security-Policy": "frame-ancestors: *;"
+        }
     }
 
