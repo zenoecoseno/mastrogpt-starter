@@ -106,3 +106,11 @@ $ ops ide deploy mastrogpt/login
 <...omissis...>
 ok: updated action mastrogpt/login
 ```
+
+---
+# <!--fit--> What is next? Select a lesson to download
+
+![bg 90%](assets/lessons.png)
+
+
+
