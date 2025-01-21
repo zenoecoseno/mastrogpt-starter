@@ -5,5 +5,29 @@
     ],
     "python.testing.unittestEnabled": false,
     "python.testing.pytestEnabled": true,
-    "markdown.marp.html": "all"
+    "markdown.marp.html": "all",
+    "workspaceKeybindings": {
+        "keybindings": [
+            {
+                "key": "ctrl+enter",
+                "command": "workbench.action.terminal.runSelectedText"
+            },
+            {
+                "key": "ctrl+shift+enter",
+                "command": "multiCommand.execToEol",
+                "when": "editorFocus && !findWidgetVisible"
+            }
+        ]
+    },
+    "multiCommand.commands": [
+        {
+            "command": "multiCommand.execToEol",
+            "sequence": [
+                "cursorEndSelect",
+                "workbench.action.terminal.runSelectedText",
+                "cursorLeft",
+                "cursorDown"
+            ]
+        }
+    ]
 }
