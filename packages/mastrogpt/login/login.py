@@ -52,16 +52,15 @@ def login(args):
         password = args.get("password")
 
         users = json.loads(Path("users.json").read_text())
-        print(users)
+        #print(users)
         if username != "" and password != "":
             if username in users:
                 if verify_password(password, users[username]):
-                    token = generate_and_save_token(args)                               
+                    token = generate_and_save_token(args)                         
                     res = {
                         "authenticated": True,
                         "token": token,
-                        "s3_key": args.get("S3_SECRET_KEY", ""),
-                        "api_key": os.getenv("__OW_API_KEY")
+                        "s3_key": args.get("S3_SECRET_KEY", "")
                     }
                     
     except Exception as e:
@@ -69,4 +68,5 @@ def login(args):
         traceback.print_exc()
     
     return res
+
   
