@@ -1,17 +1,9 @@
-<style>
-    #messageBox {
-        margin: 1rem;
-        width: 350px;
-        height: 250px;
-        border: 3px solid teal;
-        background-color: white;
-        opacity: .8;
-        border-radius: 25px;
-    }
-</style>
 <div>
-    <div id="messageBox">
-        <h2>{{title}}</h2>
-        <p>{{message}}</p>
+    <div
+        id="messageBox"
+        class="m-4 w-[350px] h-[250px] border-4 border-teal-500 bg-white bg-opacity-80 rounded-2xl p-4 shadow-md"
+    >
+        <h2 class="text-lg font-bold text-teal-700">{{title}}</h2>
+        <p class="text-sm text-gray-600 mt-2">{{message}}</p>
     </div>
 </div>

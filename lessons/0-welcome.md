@@ -35,6 +35,10 @@ https://github.com/mastrogpt/
 
 ---
 
+![bg](1-setup/architecture.png)
+
+---
+
 ![bg right:50% 90%](assets/environment.png)
 
 ## Environment Ready
@@ -47,7 +51,8 @@ https://github.com/mastrogpt/
 
 - Click on **Login** and put your credentials
 
----
+
+--- 
 
 # Check Lesson, Deployment, Tests
 
@@ -99,7 +104,7 @@ https://github.com/mastrogpt/
 - Use the terminal to change the password and redeploy the login
 
 ```
-$ ops ai update pinocchio
+$ ops ai user update pinocchio
 Enter your password: **********
 updated /home/msciab/mastrogpt2/starter/packages/mastrogpt/login/users.json
 $ ops ide deploy mastrogpt/login
