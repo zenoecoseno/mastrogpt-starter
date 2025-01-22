@@ -33,9 +33,10 @@ https://github.com/mastrogpt/
 
 <img width="70%" src="assets/codespaces.png">
 
+
 ---
 
-![bg](1-setup/architecture.png)
+![bg](assets/architecture.png)
 
 ---
 
