@@ -36,10 +36,6 @@ https://github.com/mastrogpt/
 
 ---
 
-![bg](assets/architecture.png)
-
----
-
 ![bg right:50% 90%](assets/environment.png)
 
 ## Environment Ready
@@ -112,9 +108,64 @@ $ ops ide deploy mastrogpt/login
 <...omissis...>
 ok: updated action mastrogpt/login
 ```
+---
+![bg right:50% 70%](1-setup/codespaces.png)
+
+###  Notes on GitHub Codespaces
+- Free up to 120 hours
+- Recommended: **GitHub** >> **Settings** >> **Codespaces**
+- Change: **Default Idle Timout** to 5 minutes
+- You can also work locally:
+   - wse a local **VScode** 
+   - wse a local **Docker** 
 
 ---
-# <!--fit--> What is next? Select a lesson to download
+
+![bg](https://fakeimg.pl/350x200/ff0000,0/0A6BAC?retina=1&text=Support)
+
+---
+
+![bg](assets/architecture.png)
+
+---
+
+![bg right:50% 70%](1-setup/mastrogpt-request.png)
+#### How to get an account?
+
+Free accounts by Nuvolaris on  `openserverless.dev` 
+  - Ask for an account on https://mastrogpt.com
+  - Contact us Linkedin, Discord, Email...
+
+#### <!--fit--> https://linkedin.com/in/msciab
+
+You can also self-host it, info: 
+
+##### <!--fit--> https://openserverless.apache.org
+
+---
+
+# <!--fit--> Discord: `bit.ly/openserverless-discord`
+<br>
+<center>
+<img width="80%" src="1-setup/discord.png">
+</center>
+
+---
+
+# <!--fit--> Reddit: `reddit.com/r/openserverless`
+
+<br>
+<center>
+<img width="80%" src="1-setup/reddit.png">
+</center>
+
+
+---
+
+![bg](https://fakeimg.pl/350x200/ff0000,0/0A6BAC?retina=1&text=What+is+next?)
+
+---
+# <!--fit-->  Select a lesson to download
 
 ![bg 90%](assets/lessons.png)
 

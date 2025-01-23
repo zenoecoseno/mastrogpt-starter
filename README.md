@@ -6,7 +6,15 @@ This repository is the template for the course **Developing Open LLM application
 
 You need an up and running instance of [Apache OpenServerless](https://openserverless.apache.org) to deploy and run your code. 
 
-You can ask for a free account on `openserverless.dev` on Linkedin to [Michele Sciabarra](https://linkedin.com/in/msciab) or sending an email to `info at nuvolaris dot io`.
+You can:
+-  Ask for a free development account on `openserverless.dev` courtesy of [Nuvolaris](http://nuvolaris.io). Contact us:
+   - on [MastroGPT.com](https://mastrogpt.nuvolaris.dev) using our chatbot
+   - on [Linkedin](https://linkedin.com/in/msciab) sending a private message 
+   - on [Discord](https://bit.ly/openserverless-discord) (contact ***Michele Sciabarra**)
+   - on [Reddit](https://reddit.com/r/openserverless) sending a private message to [msciabarra](https://reddit.com/u/msciabarra)
+  
+- Self-host it [installing by yourself](https://openserverless.apache.org/docs/installation/)
+
 
 ## Launch a codespace with this starter
 
