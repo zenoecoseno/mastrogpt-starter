@@ -66,6 +66,8 @@ def sum_to(n):
 
 CHESS = "rnbqkbnr/pp1ppppp/8/2p5/4P3/8/PPPP1PPP/RNBQKBNR w KQkq c6 0 2"
 
+import json
+
 def demo(args):
 
     print(args)
@@ -76,34 +78,31 @@ def demo(args):
     message = None
     html = None
     form = None
+    title = None
 
     # initialize state
-    title =  "MastroGPT Display Demo"
     try:
         # get the state if available
         counter = int(args.get("state")) +1
     except:
         # initialize the state
         counter = 1
-        
-    message =  f"You made {counter} requests"
-    state = str(counter)
-    
-    input = args.get("input", "")
 
     output = USAGE
-    if "why" in args:
-        output = "Thanks for submitting a form!"
+    state = str(counter)    
+    input = args.get("input", "")
+
+    if type(input) is dict and "form" in input:
+        data = input["form"]
+        output = "FORM:\n"
+        for field in data.keys():
+          output += f"{field}: {data[field]}\n"
     elif input == "":
         output = f"Welcome to the Demo chat. {USAGE}"
-        message = "Watch here for rich output." 
     elif input == "code":
-        code = CODE 
+        code = CODE
         language = "python"
         output = f"Here is some python code.\n```python\n{code}\n```"
-    elif input == "chess":
-        chess = CHESS
-        output = f"Check this chess position.\n\n{chess}"    
     elif input ==  "html":
         html = HTML
         output = f"Here is some HTML.\n```html\n{html}\n```"
@@ -112,11 +111,13 @@ def demo(args):
         title = "This is the title"
         output = "Here is a sample message."
     elif input == "form":
-        form = FORM
         output = "please fill the form"
+        form = FORM
+    elif input == "chess":
+        chess = CHESS
+        output = f"Check this chess position.\n\n{chess}"    
     else:
         output = f"You made {counter} requests. {USAGE}"
-
     
     # state is a counter incremented at any invocation
     res = {
