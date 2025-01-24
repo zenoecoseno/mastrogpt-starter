@@ -1,6 +1,6 @@
 # Welcome to `mastrogpt-starter`
 
-This repository is the template for the course **Developing Open LLM applications with Apache OpenServerless**, also known as **The MastroGPT course**.
+This repository is the starter for the course **Developing Open LLM applications with Apache OpenServerless**, also known as **The MastroGPT course**.
 
 ## Prerequisites
 

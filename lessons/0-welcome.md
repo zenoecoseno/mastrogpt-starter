@@ -129,7 +129,7 @@ ok: updated action mastrogpt/login
 
 ---
 
-![bg right:50% 70%](1-setup/mastrogpt-request.png)
+![bg right:50% 70%](assets/mastrogpt-request.png)
 #### How to get an account?
 
 Free accounts by Nuvolaris on  `openserverless.dev` 
@@ -147,7 +147,7 @@ You can also self-host it, info:
 # <!--fit--> Discord: `bit.ly/openserverless-discord`
 <br>
 <center>
-<img width="80%" src="1-setup/discord.png">
+<img width="80%" src="assets/discord.png">
 </center>
 
 ---
