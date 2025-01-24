@@ -156,7 +156,7 @@ You can also self-host it, info:
 
 <br>
 <center>
-<img width="80%" src="1-setup/reddit.png">
+<img width="80%" src="assets/reddit.png">
 </center>
 
 
