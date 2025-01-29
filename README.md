@@ -106,7 +106,7 @@ There are actually plenty of other commands available on the command line.
 Open a terminal (Menu: `Terminal` | `New Terminal`) then try:
 
 1. Change the password: `ops ai user update pinocchio`
-1. Redeploy the login `ops ai ide deploy mastrogpt/login`
+1. Redeploy the login `ops ide deploy mastrogpt/login`
 
 You are ready!
 
