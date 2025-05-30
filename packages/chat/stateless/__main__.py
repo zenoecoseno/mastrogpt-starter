@@ -1,9 +1,7 @@
 #--kind python:default
 #--web true
-#TODO:E2.1
-#--...
-#--...
-#END TODO
+#--param OLLAMA_HOST $OLLAMA_HOST
+#--param AUTH $AUTH
 
 import stateless
 def main(args):

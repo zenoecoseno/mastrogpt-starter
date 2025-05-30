@@ -4,10 +4,8 @@ MODEL="llama3.1:8b"
 #MODEL="deepseek-r1:32b"
 
 def url(args):
-  #TODO:E2.1
-  host = ...
-  auth = ...
-  #END TODO
+  host = args.get("OLLAMA_HOST", os.getenv("OLLAMA_HOST"))
+  auth = args.get("AUTH", os.getenv("AUTH"))
   base = f"https://{auth}@{host}"
   return f"{base}/api/generate"
 
@@ -20,12 +18,10 @@ def stream(args, lines):
     s.connect((sock, port))
     try:
       for line in lines:
-        #print(line, end='')     
-        #TODO:E2.2 fix this streaming implementation
-        # line is a json string and you have to extract only the "response" field
-        msg = {"output": line.decode("utf-8")}
-        out += str(line)
-        #END TODO
+        dec = json.loads(line.decode("utf-8")).get("response", "error")
+        dec= dec.replace("<think>","[think]").replace("</think>","[/think]")
+        msg = {"output": dec}
+        out += dec
         s.sendall(json.dumps(msg).encode("utf-8"))
     except Exception as e:
       traceback.print_exc(e)
@@ -38,10 +34,12 @@ def stateless(args):
   out = f"Welcome to {MODEL}"
   inp = args.get("input", "")
   if inp != "":
-    #TODO:E2.3 
-    # add if to switch to llama3.1:8b or deepseek-r1:32b
-    # on input 'llmama' or 'deepseek' and change the inp to "who are you"
-    #END TODO
+    if inp=="llmama":
+      MODEL="llama3.1:8b"
+      inp="who are you"
+    elif inp=="deepseek":
+      MODEL="deepseek-r1:32b"
+      inp="who are you"
     msg = { "model": MODEL, "prompt": inp, "stream": True }
     lines = req.post(llm, json=msg, stream=True).iter_lines()
     out = stream(args, lines)
